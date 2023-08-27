@@ -17,10 +17,27 @@
     -webkit-clip-path: none;
     clip-path: none;
   }
+ 
+  .about-top {
+    @include respond(phone) {
+      margin-top: 55px;
+    }
+  }
+  .btn-about-top {
+    @include respond(phone) {
+      margin-top: 12px;
+    }
+  }
+  .subtitle-phone {
+    @include respond(phone) {
+      text-decoration: underline;
+    }
+  }
 
   .about-wrapper {
+    justify-content: space-around;
     @include respond(phone) {
-      padding-bottom: 5rem;
+      
     }
 
     &__image {
@@ -37,9 +54,14 @@
       }
     }
 
+    &__btn-margin {
+      margin-top: 30px;
+    }
+
     &__info {
       display: flex;
       height: 100%;
+      width: 100%;
       justify-content: center;
       flex-direction: column;
 
@@ -47,9 +69,10 @@
         align-items: center;
       }
 
-      &-text {
-        text-align: left;
 
+      &-text {
+        text-align: center;
+        line-height: 1.7;
         @include respond(tab-port) {
           text-align: left;
         }
@@ -63,7 +86,6 @@
           font-style: italic;
           padding: 0 0.3rem;
           margin: 0.3rem 0;
-          line-height: 1.6;
 
           @include respond(phone) {
             display: inline;
